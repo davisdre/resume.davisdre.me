@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Drew's Resume</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!-- script
+    ================================================== -->
+    <script defer src="js/vendor/fontawesome/all.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("http://localhost:8000/visitors")
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("counter").innerText = data.count;
+                })
+                .catch(error => console.error('Error fetching visitor count:', error));
+        });
+    </script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" type="image/png" sizes="200x200" href="favicon-200x200.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top" class="ss-preload">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+        <div class="row s-header__nav-wrap">
+            <nav class="s-header__nav">
+                <ul>
+                    <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
+                    <li><a class="smoothscroll" href="#about">About</a></li>
+                    <li><a class="smoothscroll" href="#resume">Resume</a></li>
+                    <li><a class="smoothscroll" href="https://blog.davisdre.me/">Blog</a></li>
+                </ul>
+            </nav>
+        </div> <!-- end row -->
+        
+        <a class="s-header__menu-toggle" href="#0" title="Menu">
+            <span class="s-header__menu-icon"></span>
+        </a>
+    </header> <!-- end s-header -->
+
+
+    <!-- hero
+    ================================================== -->
+    <section id="hero" class="s-hero target-section">
+
+        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
+
+        <div class="row s-hero__content">
+            <div class="column">
+
+                <div class="s-hero__content-about">
+
+                    <h1>I'm Drew Davis.</h1>
+
+                    <h3>
+                    I'm a <span>Veteran Advocate</span>, <span>Cloud Advocate</span> 
+                    and <span>Open-Source Enthuaist</span>. This page have been viewed 
+                    <a id="counter"></a> times :) Let's <a class="smoothscroll" href="#about">start scrolling</a> 
+                    and learn more <a class="smoothscroll" href="#about">about me</a>.
+                    </h3>
+
+                    <div class="s-hero__content-social">
+                        <a href="https://hub.docker.com/u/davisdre"><i class="fab fa-docker" aria-hidden="true"></i></a>
+                        <a href="https://github.com/davisdre/"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/davisdrew/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+
+                </div> <!-- end s-hero__content-about -->
+
+            </div>
+        </div> <!-- s-hero__content -->
+
+        <div class="s-hero__scroll">
+            <a href="#about" class="s-hero__scroll-link smoothscroll">
+                <span class="scroll-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </div> <!-- s-hero__scroll -->
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="row">
+            <div class="column large-3 tab-12">
+                <img class="s-about__pic" src="images/me.png" alt="">
+            </div>
+            <div class="column large-9 tab-12 s-about__content">
+                <h3>About Me</h3>
+                <p>
+                Hi, I'm Drew Davis, <span>Cloud Administrator Senior at <a href="https://www.in.gov/iot">Indiana Office of Technology</a></span> and <span><a href="https://blog.davisdre.me/">Cloud Enthuaist</a></span> focused on making cloud learning more accessible and less daunting.
+                </p>
+            </div>
+        </div> <!-- end row -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- resume
+    ================================================== -->
+    <section id="resume" class="s-resume target-section">
+        
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Career</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Indiana Office of Technology</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Cloud Administrator Senior</span> 
+                            <span class="resume-block__header-date">
+                                February 2022 - Present
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                        As a Cloud Administrator Senior at the Indiana Office of Technology, 
+                        you are at the forefront of innovation, ensuring the seamless operation 
+                        and optimization of cloud environments. Your role involves configuring, 
+                        maintaining, and supporting Microsoft Azure and other cloud platforms, 
+                        making you a pivotal figure in the state's technological advancements.
+                    </p>
+
+                    <p class="resume-block__header-meta">
+                        <span>System Administrator Senior</span> 
+                        <span class="resume-block__header-date">
+                            February 2017 - February 2022
+                        </span>
+                    </p>
+
+                    <p>
+                        As a Senior System Administrator on Desktop Services at the Indiana 
+                        Office of Technology, you are the backbone of the state's IT infrastructure. 
+                        You lead critical projects like migrating the State of Indiana environment 
+                        to Microsoft BitLocker using Intune policy and Azure hybrid-joined device records.
+                    </p>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">United States Navy</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Information Systems Technican (Enlisted)</span> 
+                            <span class="resume-block__header-date">
+                                August 2012 - November 2012
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                        As an Information Systems Technician (Enlisted) in the United States Navy, 
+                        you are the digital lifeline of naval operations. From troubleshooting user 
+                        problems to training personnel on computer hardware and software, your 
+                        expertise keeps the Navy's technological infrastructure running smoothly. 
+                        It's a position that demands precision, adaptability, and a commitment to 
+                        excellence, making you an indispensable asset to the nation's defense.
+                    </p>
+
+                </div> <!-- end resume-block -->
+            </div>
+        </div> <!-- s-resume__section -->
+
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Education</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">ITT Technical Institute-Indianapolis</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Bachelor of Science (B.S.) in Information Systems and Cybersecurity</span> 
+                            <span class="resume-block__header-date">
+                                April 2016
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Earning a Bachelor of Science in Information Systems and Cybersecurity 
+                        from ITT Technical Institute-Indianapolis equips you with a robust 
+                        foundation in both theoretical and practical aspects of IT security.
+                    </p>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">ITT Technical Institute-Indianapolis</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Associate of Applied Science (A.A.S.) in Network Systems Administration</span> 
+                            <span class="resume-block__header-date">
+                                August 2014
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Earning an Associate of Applied Science in Network Systems 
+                        Administration from ITT Technical Institute-Indianapolis equips 
+                        you with the essential skills to manage and maintain complex network systems.
+                    </p>
+
+                </div> <!-- end resume-block -->
+            </div>
+        </div> <!-- s-resume__section -->
+
+
+        <div class="row s-resume__section">
+            <div class="column large-3 tab-12">
+                <h3 class="section-header-allcaps">Certifications</h3>
+            </div>
+            <div class="column large-9 tab-12">
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Microsoft</h4>
+                        <p class="resume-block__header-meta">
+                            <span>Microsoft Certified: Azure AI Fundamentals</span> 
+                            <span class="resume-block__header-date">
+                                September 2024
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Earners of the Azure AI Fundamentals certification have demonstrated 
+                        foundational level knowledge of Azure AI services and how those services 
+                        are provided with Microsoft Azure. <a href="https://learn.microsoft.com/api/credentials/share/en-us/davisdre/C917F32D80C38D5F?sharingId">View my verified achchievement.</a>
+                    </p>
+
+                    <p class="resume-block__header-meta">
+                        <span>Microsoft Certified: Azure Fundamentals</span> 
+                        <span class="resume-block__header-date">
+                            April 2022
+                        </span>
+                    </p>
+
+                    <p>
+                        Earners of the Azure Fundamentals certification have demonstrated 
+                        foundational level knowledge of cloud services and how those services 
+                        are provided with Microsoft Azure. <a href="https://www.credly.com/badges/8687ade1-bd1c-4301-bd7e-d7e32bc1207e/public_url">View my verified achchievement.</a>
+                    </p>
+
+                </div> <!-- end resume-block -->
+
+                <div class="resume-block">
+
+                    <div class="resume-block__header">
+                        <h4 class="h3">Amazon Web Services</h4>
+                        <p class="resume-block__header-meta">
+                            <span>AWS Certified Cloud Practitioner</span> 
+                            <span class="resume-block__header-date">
+                                July 2022
+                            </span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Earners of this certification have a fundamental understanding 
+                        of IT services and their uses in the AWS Cloud. They demonstrated 
+                        cloud fluency and foundational AWS knowledge. Badge owners are able 
+                        to identify essential AWS services necessary to set up AWS-focused 
+                        projects. <a href="https://www.credly.com/badges/730666a3-fa55-4aab-ae2c-a84f62aa84a9/public_url">View my verified achievement.</a>
+                    </p>
+
+                </div> <!-- end resume-block -->
+            </div>
+        </div> <!-- s-resume__section -->
+
+    </section> <!-- end s-resume -->    
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row">
+            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
+                <ul class="s-footer__social">
+                    <li><a href="https://hub.docker.com/u/davisdre"><i class="fab fa-docker" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/davisdre/"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/davisdrew/"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
+                <span>© Copyright Drew Davis 2024</span> 
+                <span>Design by <a href="https://www.styleshout.com/free-templates/ceevee/">StyleShout</a></span>
+            </div>
+        </div>
+
+        <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
+             </a>
+        </div> <!-- end ss-go-top -->
+    </footer>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
