@@ -33,6 +33,6 @@ jobs:
       with:
         context: ./src/frontend
         push: true
-        provenance: mode=min
+        provenance: mode=max
         sbom: true
         tags: ${{ steps.meta.outputs.tags }}
