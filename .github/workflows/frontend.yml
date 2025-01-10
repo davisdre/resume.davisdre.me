@@ -2,8 +2,6 @@ name: Frontend CI/CD
 
 on:
   push:
-    branches:
-      - main
     tags:
       - 'v*.*.*'
 
@@ -38,6 +36,5 @@ jobs:
         provenance: mode=max
         sbom: true
         tags: |
-          ${{ steps.meta.outputs.tags }}
           ${{ secrets.DOCKER_USERNAME }}/resume-frontend:latest
           ${{ secrets.DOCKER_USERNAME }}/resume-frontend:${{ github.ref_name }}
