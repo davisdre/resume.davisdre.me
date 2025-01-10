@@ -10,9 +10,7 @@ app = FastAPI()
 
 # Configuring CORS
 origins = [
-    "http://localhost",
-    "http://localhost:80",
-    "http://localhost:8000",
+    "*",
 ]
 
 app.add_middleware(
