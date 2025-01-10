@@ -2,8 +2,8 @@ name: Backend CI/CD
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
@@ -35,4 +35,6 @@ jobs:
         push: true
         provenance: mode=max
         sbom: true
-        tags: ${{ steps.meta.outputs.tags }}
+        tags: |
+          ${{ secrets.DOCKER_USERNAME }}/resume-backend:latest
+          ${{ secrets.DOCKER_USERNAME }}/resume-backend:${{ github.ref_name }}
