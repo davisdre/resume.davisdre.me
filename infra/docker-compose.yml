@@ -20,6 +20,7 @@ services:
     environment:
       DATABASE_USER: "resume_user"
       DATABASE_PASSWORD: "db_password"
+      DATABASE_HOST: "resume-db"
 
   db:
     image: mariadb:latest
