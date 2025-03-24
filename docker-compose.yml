@@ -1,0 +1,10 @@
+services:
+   web:
+        build: .
+        ports:
+            - "8000:8000"
+        environment:
+            DATABASE_USER: my_resume
+            DATABASE_PASSWORD: ub-&hkY?43Jz3ZZ79OYW
+            DATABASE_HOST: 192.168.1.81
+    
